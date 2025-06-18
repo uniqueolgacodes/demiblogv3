@@ -16,12 +16,12 @@ const getData = async () => {
 };
 
 const CategoryList = async () => {
-  const data = await getData();
+  const Data = await getData();
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
-        {data?.map((item) => (
+        {Data.map((item) => (
           <Link
             href="/blog?cat=webdev"
             className={`${styles.category} ${styles[item.slug]}`}
